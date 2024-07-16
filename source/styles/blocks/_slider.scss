@@ -1,0 +1,319 @@
+.slider {
+  width: 320px;
+  margin: 0 auto;
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
+}
+
+.slider__list {
+  min-height: 656px;
+  position: relative;
+  @media (min-width: $tablet-width) {
+    height: 828px;
+  }
+  @media (min-width: $desktop-width) {
+    height: 714px;
+  }
+}
+
+.slider__item {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.5s ease;
+  display: grid;
+  grid-template-columns: 20px 280px 20px;
+  grid-template-rows: 20px 280px 35px min-content 14px min-content 20px 40px 60px;
+  justify-items: center;
+  background-color: $lightest-grey;
+  &--flat-white {
+    background-color: $flat-white;
+  }
+  &--lavender-latte {
+    background-color: $lavender-latte;
+  }
+  &--espresso {
+    background-color: $espresso;
+  }
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 80px 608px 80px;
+    grid-template-rows: 60px 23px min-content min-content 40px 308px 188px;
+  }
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 80px 25px 600px 30px 625px 80px;
+    grid-template-rows: 10px 150px 35px min-content min-content 19px 40px 158px 24px 60px;
+    justify-items: start;
+    }
+}
+
+.slider__item--current {
+  opacity: 1;
+  z-index: 10;
+}
+
+.slider__img-wrapper {
+  width: 280px;
+  height: 280px;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  @media (min-width: $tablet-width) {
+    grid-row: 6 / -1;
+    z-index: 1;
+    width: 476px;
+    height: 476px;
+    margin-top: 20px;
+  }
+  @media (min-width: $desktop-width) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 9;
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.slider__img {
+  width: 280px;
+  height: 280px;
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    height: 476px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.slider__badge {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  align-self: center;
+  @media (min-width: $tablet-width) {
+    grid-row: 2 / 3;
+    align-self: stretch;;
+  }
+  @media (min-width: $desktop-width) {
+    grid-column: 5 / 6;
+    grid-row: 3 / 4;
+    align-self: self-end;
+  }
+}
+
+.badge-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $base-primary;
+}
+
+.slider__title {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+  margin: 0;
+  margin-top: -2px;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  letter-spacing: 1px;
+  @media (min-width: $tablet-width) {
+    grid-row: 3 / 4;
+    font-size: 56px;
+    line-height: 80px;
+    margin-bottom: 16px;
+  }
+  @media (min-width: $desktop-width) {
+    grid-column: 5 / 6;
+    grid-row: 4 / 5;
+    margin-bottom: 14px;
+    margin-top: 5px;
+  }
+}
+
+.slider__description {
+  grid-column: 2 / 3;
+  grid-row: 6 / 7;
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  @media (min-width: $tablet-width) {
+    grid-row: 4 / 5;
+    font-size: 20px;
+    line-height: 32px;
+    word-wrap: break-word;
+    margin-bottom: 19px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  @media (min-width: $desktop-width) {
+    grid-column: 5 / 6;
+    grid-row: 5 / 6;
+    text-align: left;
+    margin-left: 0;
+  }
+}
+
+.slider__buy-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  grid-column: 2 / 3;
+  grid-row: 8 / 9;
+  @media (min-width: $tablet-width) {
+    grid-row: 5 / 6;
+    justify-content: center;
+    margin-left: -24px;
+  }
+  @media (min-width: $desktop-width) {
+    grid-column: 5 / 6;
+    grid-row: 7 / 8;
+    justify-self: start;
+    justify-content: flex-start;
+  }
+}
+
+.slider__old-price {
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 400;
+  margin: 0;
+  margin-right: 7px;
+  margin-left: 25px;
+  color: $base-primary;
+  text-decoration: line-through;
+  letter-spacing: -1px;
+}
+
+.slider__current-price {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+  margin: 0;
+  margin-right: auto;
+  color: $base-black;
+  @media (min-width: $tablet-width) {
+    margin-right: 20px;
+  }
+}
+
+.slider__buy-button {
+  width: 113px;
+  height: 40px;
+  margin-right: 25px;
+  letter-spacing: 1px;
+  @media (min-width: $tablet-width) {
+    margin-right: 0;
+  }
+}
+
+.slider__button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 20px;
+  position: absolute;
+  z-index: 100;
+  @media (min-width: $tablet-width) {
+    width: 80px;
+  }
+}
+
+.slider__button:disabled > .icon-button--prev path {
+  fill: $base-grey;
+}
+
+.slider__button--prev {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  &:hover {
+    background-image: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  &:active {background-image: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%), linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  @media (min-width: $tablet-width) {
+    bottom: 188px;
+  }
+  @media (min-width: $desktop-width) {
+    bottom: 0;
+  }
+}
+
+.slider__button--next {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  &:hover {
+    background-image: linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  &:active {
+    background-image: linear-gradient(270deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%), linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    }
+    @media (min-width: $tablet-width) {
+      bottom: 188px;
+    }
+    @media (min-width: $desktop-width) {
+      bottom: 0;
+    }
+}
+
+.slider__button:disabled:hover {
+  background-image: none;
+  cursor: default;
+}
+
+.slider__controls {
+  height: 4px;
+  display: none;
+  position: absolute;
+  bottom: 80px;
+  left: 7px;
+  right: 0;
+  z-index: 100;
+  @media (min-width: $desktop-width) {
+    display: block;
+    grid-column: 3 / 6;
+    grid-row: 9 / 10;
+    justify-self: center;
+  }
+}
+
+.slider__control {
+  width: 62px;
+  height: 4px;
+  background-color: $base-white;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+  &:hover,
+  &:focus {
+    background-color: $primary-opacity-025;
+  }
+  &--active {
+    background-color: $base-primary;
+  }
+  &--active:hover,
+  &--active:focus {
+    background-color: $base-primary;
+  }
+}
+
+.slider__bottom {
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 7 / -1;
+    background-color: $base-white;
+    width: 100%;
+  }
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}

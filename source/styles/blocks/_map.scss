@@ -1,0 +1,55 @@
+.map-container {
+  width: 320px;
+  margin: 0 auto;
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
+}
+
+.map {
+  position: relative;
+  display: none;
+  background-color: $lightest-grey;
+}
+
+.map-no-js {
+  display: block;
+}
+
+.map-img {
+  width: 320px;
+  height: auto;
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
+}
+
+.map-pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-12%) translateY(-56%);
+}
+
+#map {
+  width: 320px;
+  height: 420px;
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    height: 480px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    height: 540px;
+  }
+}
+
+.map-js {
+  display: none;
+}

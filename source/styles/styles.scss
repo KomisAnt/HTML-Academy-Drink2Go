@@ -1,7 +1,14 @@
 /* GLOBAL */
-@import "./common/variables.scss";
-@import "./common/global.scss";
-@import "./common/fonts.scss";
+@import "./common/_variables";
+@import "./common/_fonts";
+@import "./common/_global";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+@import "./blocks/_header";
+@import "./blocks/_slider";
+@import "./blocks/_advantages";
+@import "./blocks/_catalog-filter";
+@import "./blocks/_catalog-goods";
+@import "./blocks/_map";
+@import "./blocks/_footer";
+@import "./common/_js-styles";
