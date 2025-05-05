@@ -44,6 +44,7 @@
 }
 
 body {
+  min-height: 100vh;
   min-width: 320px;
   max-width: 1440px;
   margin: 0 auto;
@@ -52,8 +53,7 @@ body {
   line-height: 16px;
   color: #333333;
   display: grid;
-  grid-auto-rows: auto 1fr auto;
-  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
 }
 
 .main-page {
@@ -919,19 +919,19 @@ body {
 }
 
 .advantages__item--speed::before {
-  content: url(/images/advantages/icon-speed.png);
+  content: url(../images/icon-speed@1x.png);
 }
 
 .advantages__item--fit::before {
-  content: url(/images/advantages/icon-fit.png);
+  content: url(../images/icon-fit@1x.png);
 }
 
 .advantages__item--energy::before {
-  content: url(/images/advantages/icon-energy.png);
+  content: url(../images/icon-energy@1x.png);
 }
 
 .advantages__item--eco::before {
-  content: url(/images/advantages/icon-eco.png);
+  content: url(../images/icon-eco@1x.png);
 }
 
 .advantages-item__title {
@@ -1760,7 +1760,7 @@ body {
   content: "";
   width: 20px;
   height: 16px;
-  background-image: url("/images/icons/icon-button-cart.png");
+  background-image: url("../images/icon-button-cart.png");
   position: absolute;
   top: 50%;
   left: 20px;
@@ -2266,7 +2266,6 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  padding-left: 19px;
   margin: 0;
 }
 .footer-contacts__address::before,
@@ -2368,4 +2367,48 @@ body {
 
 .menu-toogle-js {
   display: block;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+.error-page {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.error-title {
+  font-size: 34px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px){
+  .error-title {
+    font-size: 60px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+}
+
+.error-text {
+  font-size: 14px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .error-text {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+}
+
+.error-link {
+  text-decoration: none;
+}
